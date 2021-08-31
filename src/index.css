@@ -116,8 +116,16 @@ code {
   text-decoration: none;
   color: #fff; /* For Example */
 }
+a:active{
+  margin-top: 50px;
+  text-decoration: none;
+  color: #fff; /* For Example */
+}
 .link span:hover{
   text-decoration: underline;
+}
+.link span{
+  margin-left: 5px;
 }
 @media (max-width:768px) {
   .container .select_options .checkbox{

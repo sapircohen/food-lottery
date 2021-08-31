@@ -123,7 +123,7 @@ const FoodRaffle = () => {
                 <div>{winner.restaurantName}</div>
                 <a className="link" href="https://www.picogp.com/careers?utm_source=fb_lunch&utm_medium=game&utm_campaign=choose_a_place_to_eat">
                     work @ Pico: 
-                    <span>  picogp.com/careers</span>
+                    <span>picogp.com/careers</span>
                 </a>
             </div>}
         </div>
