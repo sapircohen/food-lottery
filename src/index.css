@@ -104,3 +104,16 @@ code {
 .container .select_options .select .css-26l3qy-menu{
   /* background-color: transparent; */
 }
+
+@media (max-width:480px) {
+  .container .select_options .checkbox{
+    width: 80%;
+    color: white;
+    font-size: 20px;
+  }
+  .container .select_options .single_select{
+    width: 80%;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+}
