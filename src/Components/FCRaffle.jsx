@@ -105,16 +105,26 @@ const FoodRaffle = () => {
                     <label for="scales">Near Pico</label>
                 </div>
             </div>
-            {showRoll&&<div className="roll_button">
+            {(showRoll)&&<div className="roll_button">
                 <button onClick={Roll}>Roll</button>
             </div>}
             {currentFood!==''&&
-                <div className="roll_div">
-                    {currentFood.restaurantName}
+                <div className="roll_div">                
+                    <div className="pico_jobs">
+                        Come eat lunch with us..
+                        <br/>
+                        Pico is hiring!
+                    </div>
+                    <span>{currentFood.restaurantName}</span>
                 </div>}
-            {winner!==''&&<div className="roll_div">
-                <div>the winner is:</div>
+            {winner!==''&&
+            <div className="roll_div">
+                <div>The winner is:</div>
                 <div>{winner.restaurantName}</div>
+                <a className="link" href="https://www.picogp.com/careers?utm_source=fb_lunch&utm_medium=game&utm_campaign=choose_a_place_to_eat">
+                    work @ Pico: 
+                    <span>  picogp.com/careers</span>
+                </a>
             </div>}
         </div>
     );

@@ -45,8 +45,15 @@ code {
   align-items: center;
   flex-direction: column;
 }
-.container .roll_div div{
-
+.container .roll_div .pico_jobs{
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding: 10px 50px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(90deg,#f53a6c,#f54e56);
 } 
 .container .roll_button button{
   cursor: pointer;
@@ -62,7 +69,7 @@ code {
     border: 5px solid #fff;
     padding: 0.5em 2em;
     border-radius: 3em;
-    transition: 500ms ease;
+    transition: 500ms ease-in-out;
 }
 .container .roll_button button:hover{
   background-image: linear-gradient(90deg,#f54e56,#f53a6c);
@@ -79,7 +86,7 @@ code {
 }
 .container .select_options .select .css-yk16xz-control{
   /* background-image: linear-gradient(90deg,#f53a6c,#f54e56); */
-  background-color: #F4F2FF;
+  /* background-color: #F4F2FF; */
     color: white;
 }
 /* .container .select_options .select .css-yk16xz-control .css-1wa3eu0-placeholder{
@@ -89,7 +96,7 @@ code {
   color: white;
 } */
 .css-g1d714-ValueContainer div .css-1rhbuit-multiValue{
-  background-image: linear-gradient(90deg,#f53a6c,#f54e56);
+  background-image: linear-gradient(90deg,#f53a6c,#f54e56) !important;
   
 }
 .css-g1d714-ValueContainer div .css-1rhbuit-multiValue .css-12jo7m5{
@@ -97,15 +104,22 @@ code {
 }
 .container .select_options .select .css-1pahdxg-control{
   /* background-image: linear-gradient(90deg,#f53a6c,#f54e56); */
-  background-color: #F4F2FF;
+  /* background-color: #F4F2FF; */
   caret-color: white;
   color: white;
 }
 .container .select_options .select .css-26l3qy-menu{
   /* background-color: transparent; */
 }
-
-@media (max-width:480px) {
+.link{
+  margin-top: 50px;
+  text-decoration: none;
+  color: #fff; /* For Example */
+}
+.link span:hover{
+  text-decoration: underline;
+}
+@media (max-width:768px) {
   .container .select_options .checkbox{
     width: 80%;
     color: white;
