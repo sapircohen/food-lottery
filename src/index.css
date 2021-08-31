@@ -5,9 +5,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #070F2F;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.container .select_options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.container .select_options .checkbox{
+  width: 50%;
+  color: white;
+  font-size: 20px;
+}
+.container .roll_button{
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .roll_div{
+  font-size: 24px;
+  color: white;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .roll_div div{
+
+} 
+.container .roll_button button{
+  cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+    background-image: linear-gradient(90deg,#f53a6c,#f54e56);
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    border: 5px solid #fff;
+    padding: 0.5em 2em;
+    border-radius: 3em;
+    transition: 500ms ease;
+}
+.container .roll_button button:hover{
+  background-image: linear-gradient(90deg,#f54e56,#f53a6c);
+}
+.container .select_options .single_select{
+  width: 50%;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+.container .select_options .single_select .headline{
+  color: white;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+.container .select_options .select .css-yk16xz-control{
+  /* background-image: linear-gradient(90deg,#f53a6c,#f54e56); */
+  background-color: #F4F2FF;
+    color: white;
+}
+/* .container .select_options .select .css-yk16xz-control .css-1wa3eu0-placeholder{
+  color: white;
+}
+.container .select_options .select .css-1pahdxg-control .css-1wa3eu0-placeholder{
+  color: white;
+} */
+.css-g1d714-ValueContainer div .css-1rhbuit-multiValue{
+  background-image: linear-gradient(90deg,#f53a6c,#f54e56);
+  
+}
+.css-g1d714-ValueContainer div .css-1rhbuit-multiValue .css-12jo7m5{
+  color: white;
+}
+.container .select_options .select .css-1pahdxg-control{
+  /* background-image: linear-gradient(90deg,#f53a6c,#f54e56); */
+  background-color: #F4F2FF;
+  caret-color: white;
+  color: white;
+}
+.container .select_options .select .css-26l3qy-menu{
+  /* background-color: transparent; */
 }
