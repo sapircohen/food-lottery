@@ -9,6 +9,9 @@ const FoodRaffle = () => {
     const [currentFood,setCurrentFood] = useState('');
     const [showRoll,setShowRoll] = useState(true);
     const [checked,setChecked] = useState(false);
+    const [checkedV,setCheckedV] = useState(false);
+    const [checkedK,setCheckedK] = useState(false);
+
     const [valuesTypes,setValueTypes] = useState([]);
     const [time,setTime] = useState(200);
 
@@ -23,7 +26,7 @@ const FoodRaffle = () => {
 
     useEffect(()=>{
         order();
-    },[valuesTypes,time,checked])
+    },[valuesTypes,time,checked,checkedK,checkedV])
 
     const randomName=() => {
         const rand = Math.floor(Math.random() * food.length);
@@ -59,11 +62,12 @@ const FoodRaffle = () => {
     }
     const changeCheckbox = (event) =>{
         setChecked(event.target.checked);
-        if(event.target.checked){
-            let temp_food = foodPlaces.filter((food)=>food.distanceFromUser<1000);
-            setFood([...temp_food]);
-        }
-        else setFood([...food]);
+    }
+    const changeCheckboxVegan = (event) =>{
+        setCheckedV(event.target.checked);
+    }
+    const changeCheckboxKosher = (event) =>{
+        setCheckedK(event.target.checked);
     }
     const changeCuisine = (values) =>{
         let values_v = []
@@ -81,6 +85,12 @@ const FoodRaffle = () => {
         if(checked){
             temp_food = temp_food.filter((food)=>food.distanceFromUser<1000);
         }
+        if(checkedV){
+            temp_food = temp_food.filter((food)=>food.isVegan);
+        }
+        if(checkedK){
+            temp_food = temp_food.filter((food)=>food.isKosher);
+        }
         if (time) {
             temp_food = temp_food.filter((food)=>food.deliveryTimeInMinutes<time);
         }
@@ -93,6 +103,8 @@ const FoodRaffle = () => {
             setFood([...temp_food2]);
         }
         else setFood([...temp_food]);
+        console.log('temp_food2',temp_food2);
+        console.log('temp_food',temp_food);
     }
       
     return ( 
@@ -103,6 +115,14 @@ const FoodRaffle = () => {
                 <div className="checkbox">
                     <input onChange={changeCheckbox} type="checkbox" id="scales" name="scales"/>
                     <label for="scales">Near Pico</label>
+                </div>
+                <div className="checkbox">
+                    <input onChange={changeCheckboxVegan} type="checkbox" id="Vegan" name="Vegan"/>
+                    <label for="Vegan">Vegan</label>
+                </div>
+                <div className="checkbox">
+                    <input onChange={changeCheckboxKosher} type="checkbox" id="Kosher" name="Kosher"/>
+                    <label for="Vegan">Kosher</label>
                 </div>
             </div>
             {(showRoll)&&<div className="roll_button">
